@@ -1,8 +1,13 @@
 p {
-  margin: 0;
+  margin: 10px;
   padding: 0;
 }
 
 .input-books {
   display: block;
+  margin: 15px;
+}
+
+.add-books {
+  margin-left: 15px;
 }
