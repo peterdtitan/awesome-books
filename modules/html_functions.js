@@ -1,34 +1,34 @@
-export const booksList = document.getElementById("books-list");
-const contactInfoSection = document.getElementById("contact-info");
-const inputFormSection = document.getElementById("input-form");
-const awesomeBooksSection = document.getElementById("awesome-books");
-export const showListButton = document.getElementById("show-list-button");
-export const addNewButton = document.getElementById("add-new-button");
-export const contactInfoButton = document.getElementById("contact-info-button");
+export const booksList = document.getElementById('books-list');
+const contactInfoSection = document.getElementById('contact-info');
+const inputFormSection = document.getElementById('input-form');
+const awesomeBooksSection = document.getElementById('awesome-books');
+export const showListButton = document.getElementById('show-list-button');
+export const addNewButton = document.getElementById('add-new-button');
+export const contactInfoButton = document.getElementById('contact-info-button');
 
 export const displayNewElement = (book, library) => {
   // Shows the added book in html
-  const bookDiv = document.createElement("div");
-  bookDiv.classList.add("book");
+  const bookDiv = document.createElement('div');
+  bookDiv.classList.add('book');
 
-  const removeButton = document.createElement("button");
+  const removeButton = document.createElement('button');
   removeButton.classList.add(
-    "remove-button",
-    "col-2",
-    "mt-1",
-    "btn",
-    "btn-danger",
-    "btn-sm"
+    'remove-button',
+    'col-2',
+    'mt-1',
+    'btn',
+    'btn-danger',
+    'btn-sm',
   );
-  removeButton.textContent = "Remove";
-  const bookStore = document.createElement("div");
+  removeButton.textContent = 'Remove';
+  const bookStore = document.createElement('div');
   bookStore.classList.add(
-    "book-store",
-    "col-12",
-    "border",
-    "px-3",
-    "px-lg-5",
-    "mt-3"
+    'book-store',
+    'col-12',
+    'border',
+    'px-3',
+    'px-lg-5',
+    'mt-3',
   );
 
   bookStore.innerHTML = `
@@ -41,7 +41,7 @@ export const displayNewElement = (book, library) => {
 
   booksList.appendChild(bookDiv);
 
-  removeButton.addEventListener("click", () => {
+  removeButton.addEventListener('click', () => {
     library.removeBook(book);
     bookDiv.remove();
 
@@ -54,28 +54,28 @@ export const displayNewElement = (book, library) => {
 };
 
 const switchActive = (node) => {
-  if (showListButton !== node && showListButton.classList.contains("active")) {
-    showListButton.classList.remove("active");
+  if (showListButton !== node && showListButton.classList.contains('active')) {
+    showListButton.classList.remove('active');
   } else if (
-    addNewButton !== node &&
-    addNewButton.classList.contains("active")
+    addNewButton !== node
+    && addNewButton.classList.contains('active')
   ) {
-    addNewButton.classList.remove("active");
+    addNewButton.classList.remove('active');
   } else if (
-    contactInfoButton !== node &&
-    contactInfoButton.classList.contains("active")
+    contactInfoButton !== node
+    && contactInfoButton.classList.contains('active')
   ) {
-    contactInfoButton.classList.remove("active");
+    contactInfoButton.classList.remove('active');
   }
-  node.classList.add("active");
+  node.classList.add('active');
 };
 
 export const showBooksList = () => {
   switchActive(showListButton);
-  awesomeBooksSection.style.display = "flex";
+  awesomeBooksSection.style.display = 'flex';
 
-  contactInfoSection.style.display = "none";
-  inputFormSection.style.display = "none";
+  contactInfoSection.style.display = 'none';
+  inputFormSection.style.display = 'none';
 };
 
 export const showListButtonListener = (event) => {
@@ -86,17 +86,17 @@ export const showListButtonListener = (event) => {
 export const addNewButtonListener = (event) => {
   event.preventDefault();
   switchActive(addNewButton);
-  inputFormSection.style.display = "flex";
+  inputFormSection.style.display = 'flex';
 
-  contactInfoSection.style.display = "none";
-  awesomeBooksSection.style.display = "none";
+  contactInfoSection.style.display = 'none';
+  awesomeBooksSection.style.display = 'none';
 };
 
 export const contactInfoButtonListener = (event) => {
   event.preventDefault();
   switchActive(contactInfoButton);
-  contactInfoSection.style.display = "flex";
+  contactInfoSection.style.display = 'flex';
 
-  awesomeBooksSection.style.display = "none";
-  inputFormSection.style.display = "none";
+  awesomeBooksSection.style.display = 'none';
+  inputFormSection.style.display = 'none';
 };

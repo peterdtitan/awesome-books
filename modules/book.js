@@ -1,5 +1,5 @@
 export default class Book {
-  // Book Class has a title and author property. 
+  // Book Class has a title and author property.
   title;
 
   author;
