@@ -1,0 +1,25 @@
+.input-form {
+  display: block;
+  background-color: #f7f7f7;
+}
+
+.awesome-container {
+  display: grid;
+}
+
+.book {
+  display: flex;
+}
+
+.book-store {
+  display: flex;
+}
+
+.remove-button {
+  width: 100px;
+  height: 40px;
+  background-color: aqua;
+  color: black;
+  border: 0;
+  border-radius: 8px;
+}
