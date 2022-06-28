@@ -12,16 +12,32 @@ export const displayNewElement = (book, library) => {
   bookDiv.classList.add('book');
 
   const removeButton = document.createElement('button');
-  removeButton.classList.add('remove-button');
+  removeButton.classList.add(
+    'remove-button',
+    'col-2',
+    'mt-1',
+    'btn',
+    'btn-danger',
+    'btn-sm',
+  );
   removeButton.textContent = 'Remove';
+  const bookStore = document.createElement('div');
+  bookStore.classList.add(
+    'book-store',
+    'col-12',
+    'border',
+    'px-3',
+    'px-lg-5',
+    'mt-3',
+  );
 
-  bookDiv.innerHTML = `
-  <div class="book-store">
-    <h2 class="book-title">"${book.title}"</h2>
-    <p class="book-author">by ${book.author}</p>
-  </div>
+  bookStore.innerHTML = `
+    <h2 class="book-title col">"${book.title}"</h2>
+    <p class="book-author col pt-2">by ${book.author}</p>
   `;
-  bookDiv.appendChild(removeButton);
+
+  bookStore.appendChild(removeButton);
+  bookDiv.appendChild(bookStore);
 
   booksList.appendChild(bookDiv);
 
@@ -31,7 +47,7 @@ export const displayNewElement = (book, library) => {
 
     if (library.books.length === 0) {
       booksList.innerHTML = `
-        <p class="empty-library">No Books in the Library.</p>
+        <p class="empty-library fw-bold text-center">No Books in the Library!</p>
       `;
     }
   });
@@ -40,9 +56,15 @@ export const displayNewElement = (book, library) => {
 const switchActive = (node) => {
   if (showListButton !== node && showListButton.classList.contains('active')) {
     showListButton.classList.remove('active');
-  } else if (addNewButton !== node && addNewButton.classList.contains('active')) {
+  } else if (
+    addNewButton !== node
+    && addNewButton.classList.contains('active')
+  ) {
     addNewButton.classList.remove('active');
-  } else if (contactInfoButton !== node && contactInfoButton.classList.contains('active')) {
+  } else if (
+    contactInfoButton !== node
+    && contactInfoButton.classList.contains('active')
+  ) {
     contactInfoButton.classList.remove('active');
   }
   node.classList.add('active');
