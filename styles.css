@@ -9,6 +9,7 @@
 
 .book {
   display: flex;
+  align-items: center;
 }
 
 .book-store {
@@ -18,8 +19,8 @@
 .remove-button {
   width: 100px;
   height: 40px;
-  background-color: aqua;
-  color: black;
+  color: black !important;
+  font-size: 12px !important;
   border: 0;
   border-radius: 8px;
 }

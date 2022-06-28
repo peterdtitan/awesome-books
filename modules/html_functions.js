@@ -32,8 +32,8 @@ export const displayNewElement = (book, library) => {
   );
 
   bookStore.innerHTML = `
-    <h2 class="book-title col-5">"${book.title}"</h2>
-    <p class="book-author col-5 pt-2">by ${book.author}</p>
+    <h2 class="book-title col">"${book.title}"</h2>
+    <p class="book-author col pt-2">by ${book.author}</p>
   `;
 
   bookStore.appendChild(removeButton);
