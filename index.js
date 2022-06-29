@@ -34,11 +34,14 @@ addBookForm.addEventListener('submit', (event) => {
     booksList.innerHTML = '';
   }
   const result = library.addBook(
-    new Book(addBookForm.elements.title.value, addBookForm.elements.author.value),
+    new Book(
+      addBookForm.elements.title.value,
+      addBookForm.elements.author.value,
+    ),
   );
   if (result) {
     displayNewElement(result, library);
-  }s
+  }
   addBookForm.elements.title.value = '';
   addBookForm.elements.author.value = '';
   showBooksList();
@@ -49,7 +52,9 @@ addNewButton.addEventListener('click', addNewButtonListener);
 contactInfoButton.addEventListener('click', contactInfoButtonListener);
 
 const displayTime = () => {
-  document.getElementById('current-date').innerHTML = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_MED_WITH_SECONDS);
+  document.getElementById('current-date').innerHTML = luxon.DateTime.now().toLocaleString(
+    luxon.DateTime.DATETIME_MED_WITH_SECONDS,
+  );
   setTimeout(displayTime, 1000);
 };
 displayTime();
