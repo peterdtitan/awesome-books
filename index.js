@@ -46,3 +46,9 @@ addBookForm.addEventListener('submit', (event) => {
 showListButton.addEventListener('click', showListButtonListener);
 addNewButton.addEventListener('click', addNewButtonListener);
 contactInfoButton.addEventListener('click', contactInfoButtonListener);
+
+const displayTime = () => {
+  document.getElementById('current-date').innerHTML = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_MED_WITH_SECONDS);
+  setTimeout(displayTime, 1000);
+};
+displayTime();
