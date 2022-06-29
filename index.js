@@ -38,7 +38,7 @@ addBookForm.addEventListener('submit', (event) => {
   );
   if (result) {
     displayNewElement(result, library);
-  }
+  }s
   addBookForm.elements.title.value = '';
   addBookForm.elements.author.value = '';
   showBooksList();
