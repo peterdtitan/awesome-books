@@ -10,6 +10,21 @@
 - HTML
 - JavaScript
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+- A simple web browser (preferably Chrome or Firefox)
+- An IDE
+
+### Setup
+- Clone this repository into a directory of your choice and open the index.html file
+
+OR
+
+- Download this repository as a .zip file
+- Extract contents and open the index.html file.
 
 
 ## Authors
