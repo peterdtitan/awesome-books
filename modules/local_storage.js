@@ -1,6 +1,6 @@
 const storageAvailable = (type) => {
-  let storage = window[type];
-  let x = '__storage_test__';
+  const storage = window[type];
+  const x = '__storage_test__';
   try {
     storage.setItem(x, x);
     storage.removeItem(x);
