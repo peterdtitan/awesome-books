@@ -1,3 +1,4 @@
+// Modular exports start here
 export const booksList = document.getElementById('books-list');
 const contactInfoSection = document.getElementById('contact-info');
 const inputFormSection = document.getElementById('input-form');
