@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Awesome Books
 
 > Awesome books is an app built with JavaScript, It stores your favorite books with features that let you add and remove books.
